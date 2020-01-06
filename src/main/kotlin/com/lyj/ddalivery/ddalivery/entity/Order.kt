@@ -1,5 +1,6 @@
 package com.lyj.ddalivery.ddalivery.entity
 
+import com.thinkinglogic.builder.annotation.Builder
 import javax.persistence.*
 
 /**
