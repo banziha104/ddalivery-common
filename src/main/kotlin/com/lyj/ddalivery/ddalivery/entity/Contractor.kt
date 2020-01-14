@@ -11,6 +11,6 @@ import javax.persistence.*
 @Table(name = "contractor")
 data class Contractor(
         @GeneratedValue(strategy = GenerationType.IDENTITY) @Id val contractorId : Long,
-        @Column(nullable = false, length = 20) val name : String,
+        @Column(nullable = false, length = 20) val contractName : String,
         @Column(length = 30) val address : String
 )

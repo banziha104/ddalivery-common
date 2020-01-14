@@ -11,7 +11,7 @@ import javax.persistence.*
 @Table(name = "product")
 data class Product(
         @GeneratedValue(strategy = GenerationType.IDENTITY) @Id val productId: Long?,
-        @Column(length = 100, nullable = false) val name: String,
+        @Column(length = 100, nullable = false) val productName: String,
         @Column(nullable = false) val image: String,
         @Column(nullable = false) val description: String,
         @Column(nullable = false) val price: Int,
