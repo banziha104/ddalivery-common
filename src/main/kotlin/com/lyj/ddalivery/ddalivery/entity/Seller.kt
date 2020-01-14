@@ -3,6 +3,10 @@ package com.lyj.ddalivery.ddalivery.entity
 import com.vividsolutions.jts.geom.Point
 import javax.persistence.*
 
+
+/***
+ * 판매자
+ */
 @Entity
 @Table(name = "seller")
 data class Seller(
@@ -21,6 +25,7 @@ data class Seller(
 
         @Column(nullable = false)
         val longitude : Double,
+
 
         @OneToMany(mappedBy = "seller") var products : List<Product>? = null
 

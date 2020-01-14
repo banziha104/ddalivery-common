@@ -6,7 +6,6 @@ import javax.persistence.*
 /**
  * 주문
  */
-
 @Entity
 @Table(name = "order_table")
 data class Order(
