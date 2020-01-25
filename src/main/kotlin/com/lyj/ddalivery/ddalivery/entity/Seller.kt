@@ -21,6 +21,9 @@ data class Seller(
         val image: String,
 
         @Column(nullable = false)
+        val address : String,
+
+        @Column(nullable = false)
         val latitude : Double,
 
         @Column(nullable = false)
