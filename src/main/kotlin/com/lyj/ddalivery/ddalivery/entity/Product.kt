@@ -9,6 +9,7 @@ import javax.persistence.*
  * 상품 엔티티
  */
 
+
 @Entity
 @Table(name = "product")
 data class Product(

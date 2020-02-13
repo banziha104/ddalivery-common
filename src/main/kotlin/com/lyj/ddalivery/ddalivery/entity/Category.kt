@@ -6,6 +6,7 @@ import javax.persistence.*
 /**
  * 카테고리 엔티티
  */
+
 @Entity
 @Table(name = "category")
 data class Category(
