@@ -6,7 +6,7 @@ import javax.persistence.*
 @Entity
 @Table(name = "order_group")
 data class OrderGroup(
-        @GeneratedValue(strategy = GenerationType.IDENTITY) @Id val orderGroupId : Long,
+        @GeneratedValue(strategy = GenerationType.IDENTITY) @Id val orderGroupId : Long?,
         @Column val clientName : String,
         @Column val address : String,
         @Column val lat : Double,

@@ -12,8 +12,9 @@ import javax.persistence.*
 @Entity
 @Table(name = "order_table")
 data class Order(
-        @GeneratedValue(strategy = GenerationType.IDENTITY) @Id val orderId : Long,
-        @Column var clientId : Long, // 주문자명
-        @Column var productId : Long, // 아이템명
-        @ManyToOne(cascade = [CascadeType.ALL], fetch = FetchType.LAZY) @JoinColumn(name = "order_group_id") var orderGroup : OrderGroup
+        @GeneratedValue(strategy = GenerationType.IDENTITY) @Id val orderId : Long?,
+        @Column val clientId : Long, // 주문자명
+        @Column val productId : Long, // 아이템명
+        @Column val quantity : Int,
+        @ManyToOne(cascade = [CascadeType.ALL], fetch = FetchType.LAZY) @JoinColumn(name = "order_group_id") var orderGroup : OrderGroup? = null
 )
