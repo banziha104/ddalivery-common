@@ -7,11 +7,11 @@ import javax.persistence.*
 @Table(name = "order_group")
 data class OrderGroup(
         @GeneratedValue(strategy = GenerationType.IDENTITY) @Id val orderGroupId: Long?,
+        @Column(nullable = false) val clientId : Int,
         @Column(nullable = false) val clientName: String,
         @Column(nullable = false) val address: String,
         @Column(nullable = false) val latitude: Double,
         @Column(nullable = false) val longitude: Double,
-        @Column(nullable = false) val totalPrice: Int,
         @Column(nullable = false) var isMatched: Boolean,
         @Column(nullable = false) var isCompleted: Boolean,
         @OneToMany(mappedBy = "orderGroup") val orders: List<Order>? = null
